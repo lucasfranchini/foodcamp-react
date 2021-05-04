@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos/reset.css">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <title>foodcamp</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div class="root">
+    <div class="topo">
+      <p>FoodCamp</p>
+      <p>Sua comida em 6 minutos</p>
+    </div>
+    <div class="pedidos">
+      <div class="principal">
+        <p class="titulo">Primeiro, seu prato</p>
+        <ul class="itens">
+          <li class="item" onclick="pratoprincipal(0)">
+            <img src="imagens/frango_yin_yang 1.png" alt="">
+            <p><strong>Frango Yin Yang</strong></p>
+            <p class="extras">Um pouco de batata,<br>um pouco de salada</p>
+            <p>R$ 14,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="pratoprincipal(1)">
+            <img src="imagens/salmão.jpg" alt="">
+            <p><strong>salmão grelhado</strong></p>
+            <p class="extras">Um pouco de cuscuz,<br>um pouco de legume</p>
+            <p>R$ 21,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="pratoprincipal(2)">
+            <img src="imagens/macarrão.jpg" alt="">
+            <p><strong>Macarrão</strong></p>
+            <p class="extras">Molho de tomate,<br>queijo parmesão</p>
+            <p>R$ 16,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="pratoprincipal(3)">
+            <img src="imagens/ratatouille.jpg" alt="">
+            <p><strong>ratatouille</strong></p>
+            <p class="extras">Um pouco de legume,<br>mais legumes</p>
+            <p>R$ 18,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+        </ul>
+      </div>
+      <div class="bebida">
+        <p class="titulo">Agora, sua bebida</p>
+        <ul class="itens">
+          <li class="item" onclick="bebidas(0)">
+            <img src="imagens/coca.jpg" alt="">
+            <p><strong>Refrigerante</strong></p>
+            <p class="extras">Lata 350ml</p>
+            <p>R$ 4,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="bebidas(1)">
+            <img src="imagens/laranja.jpg" alt="">
+            <p><strong>Suco</strong></p>
+            <p class="extras">copo 300ml</p>
+            <p>R$ 5,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="bebidas(2)">
+            <img src="imagens/laranja.jpg" alt="">
+            <p><strong>Suco Grande</strong></p>
+            <p class="extras">copo 500ml</p>
+            <p>R$ 7,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="bebidas(3)">
+            <img src="imagens/Odin.jpg" alt="">
+            <p><strong>Cerveja artesanal</strong></p>
+            <p class="extras">Garrafa 600ml</p>
+            <p>R$ 16,00</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+        </ul>
+      </div>
+      <div class="sobremesa">
+        <p class="titulo">Por fim, sua sobremesa</p>
+        <ul class="itens">
+          <li class="item" onclick="sobremesas(0)">
+            <img src="imagens/pudim.png" alt="">
+            <p><strong>Pudim</strong></p>
+            <p class="extras">Apenas pudim</p>
+            <p>R$ 14,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="sobremesas(1)">
+            <img src="imagens/petit-gateu.jpg" alt="">
+            <p><strong>Petit gateu</strong></p>
+            <p class="extras">sorvete, bolo e calda</p>
+            <p>R$ 16,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="sobremesas(2)">
+            <img src="imagens/sorvete.jpg" alt="">
+            <p><strong>Sorvete</strong></p>
+            <p class="extras">apenas sorvete</p>
+            <p>R$ 8,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+          <li class="item" onclick="sobremesas(3)">
+            <img src="imagens/acai.jpg" alt="">
+            <p><strong>Açai</strong></p>
+            <p class="extras">açai 500ml</p>
+            <p>R$ 12,90</p>
+            <ion-icon name="checkmark-circle"></ion-icon>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="final">
+      <button onclick="pedir_ou_cancelar()"> Selecione os 3 itens <br>
+        para fechar o pedido</button>
+    </div>
+  </div>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</body>
+
 </html>
