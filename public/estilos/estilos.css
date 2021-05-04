@@ -18,15 +18,13 @@
     font-family: 'Righteous', cursive;
     font-size: 44px;
 }
-.pedidos{
-    padding-left: 19px;
-}
 .principal{
     margin-top: 123px;
     line-height: 32px;  
     font-size: 26px;
     font-family: 'Righteous', cursive;
     color: #333;
+    padding-left: 19px;
     
 }
 .titulo{
@@ -91,6 +89,7 @@
     font-size: 26px;
     font-family: 'Righteous', cursive;
     color: #333;
+    padding-left: 19px;
 }
 .sobremesa{
     margin-top: 27px;
@@ -99,6 +98,7 @@
     font-size: 26px;
     font-family: 'Righteous', cursive;
     color: #333;
+    padding-left: 19px;
 }
 .final{
     height: 92px;
