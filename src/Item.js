@@ -3,8 +3,8 @@ import CalculatePrice from "./CalculatePrice";
 export default function Item(props){
         
     const [check,setCheck] = React.useState(false);
-    const [price,setPrice] = React.useState(props.price);
-    const [type,setType] = React.useState(props.type)
+    const [price] = React.useState(props.price);
+    const [type] = React.useState(props.type)
     return (
         <li className={check===true ? "item checked": "item"} onClick={()=>{
             setCheck(true);

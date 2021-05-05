@@ -32,9 +32,9 @@ export default function Bebidas(){
         }
     ];
     return(
-        <div class="bebida">
-            <p class="titulo">Agora, sua bebida</p>
-            <ul class="itens">
+        <div className="bebida">
+            <p className="titulo">Agora, sua bebida</p>
+            <ul className="itens">
                 {bebidas.map((bebida)=><Item img={bebida.img} name={bebida.name} description={bebida.description} price={bebida.price} type={bebida.type} />)}
             </ul>
       </div>
