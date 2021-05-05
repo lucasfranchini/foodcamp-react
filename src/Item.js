@@ -5,16 +5,22 @@ export default function Item(props){
     const [check,setCheck] = React.useState(false);
     const [counter,setCounter] = React.useState(1);
     const item = props.item;
-    function changeCounter(){
-        
+    const x = {...props.selectedItems};
+    function markedItem(){
+        if(!check){
+            setCheck(true);
+            CalculatePrice(item,1);    
+            verifyItem(x);
+            props.setSelectedItems(x);
+        }
+    }
+    function verifyItem(x){
+        if(props.type==="principal") x.principal=true;
+        if(props.type==="bebida") x.drink=true;
+        if(props.type==="sobremesa") x.desert=true;
     }
     return (
-        <li className={check===true ? "item checked": "item"} onClick={()=>{
-            if(!check){
-                setCheck(true);
-                CalculatePrice(item,1);
-            }
-        }}>
+        <li className={check===true ? "item checked": "item"} onClick={markedItem}>
             <img src={item.img}alt=""/>
             <p><strong>{item.name}</strong></p>
             <p className="extras">{item.description}</p>

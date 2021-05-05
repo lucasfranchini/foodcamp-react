@@ -97,7 +97,7 @@ function App() {
         }
     ];
     
-    const [selectedItems,setSelctedItems] = React.useState({
+    const [selectedItems,setSelectedItems] = React.useState({
         principal: false,
         drink: false,
         desert: false
@@ -105,10 +105,10 @@ function App() {
     return (
         <>
             <Topo/>
-            <MakeList type="principal" title="Primeiro, seu prato" items={pratos}/>
-            <MakeList type="bebida" title="Agora, sua bebida" items={bebidas}/>
-            <MakeList type="sobremesa" title="Por fim, sua sobremesa" items={sobremesas}/>
-            <FinalizarCompra selctedItems={selectedItems}/>
+            <MakeList type="principal" title="Primeiro, seu prato" items={pratos} selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
+            <MakeList type="bebida" title="Agora, sua bebida" items={bebidas} selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
+            <MakeList type="sobremesa" title="Por fim, sua sobremesa" items={sobremesas} selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
+            <FinalizarCompra selectedItems={selectedItems}/>
         </>
     );
 }
