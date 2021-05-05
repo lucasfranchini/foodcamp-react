@@ -4,7 +4,7 @@ export default function Item(props){
         
     const [check,setCheck] = React.useState(false);
     const [counter,setCounter] = React.useState(1);
-    const [item] = React.useState(props.item);
+    const item = props.item;
     function changeCounter(){
         
     }
