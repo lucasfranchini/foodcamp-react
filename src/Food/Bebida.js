@@ -35,7 +35,7 @@ export default function Bebidas(){
         <div className="bebida">
             <p className="titulo">Agora, sua bebida</p>
             <ul className="itens">
-                {bebidas.map((bebida)=><Item img={bebida.img} name={bebida.name} description={bebida.description} price={bebida.price} type={bebida.type} />)}
+                {bebidas.map((bebida)=><Item item={bebida} />)}
             </ul>
       </div>
     );

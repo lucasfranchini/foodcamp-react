@@ -3,17 +3,16 @@ import CalculatePrice from "./CalculatePrice";
 export default function Item(props){
         
     const [check,setCheck] = React.useState(false);
-    const [price] = React.useState(props.price);
-    const [type] = React.useState(props.type)
+    const [item] = React.useState(props.item);
     return (
         <li className={check===true ? "item checked": "item"} onClick={()=>{
             setCheck(true);
-            CalculatePrice(price,type);
+            CalculatePrice(item);
         }}>
-            <img src={props.img}alt=""/>
-            <p><strong>{props.name}</strong></p>
-            <p className="extras">{props.description}</p>
-            <p> R$ {props.price}</p>
+            <img src={item.img}alt=""/>
+            <p><strong>{item.name}</strong></p>
+            <p className="extras">{item.description}</p>
+            <p> R$ {item.price}</p>
             <ion-icon name="checkmark-circle"></ion-icon>
         </li>
     );

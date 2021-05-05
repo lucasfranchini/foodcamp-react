@@ -32,12 +32,12 @@ export default function PratoPrincipal(){
             type: "principal"
         }
     ]
-
+ //img={prato.img} name={prato.name} description={prato.description} price={prato.price} type={prato.type}
     return (
         <div className="principal">
             <p className="titulo">Primeiro, seu prato</p>
             <ul className="itens">
-                {pratos.map((prato)=><Item img={prato.img} name={prato.name} description={prato.description} price={prato.price} type={prato.type} />)}
+                {pratos.map((prato)=><Item  item={prato}/>)}
             </ul>
       </div>
     );
