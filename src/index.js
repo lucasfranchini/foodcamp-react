@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import Topo from "./cabecalho e rodape/Topo";
-import MakeList from "./Food/Makelist";
+import MakeList from "./Makelist";
 import FinalizarCompra from './cabecalho e rodape/FinalizarCompra';
 import React from 'react';
 
