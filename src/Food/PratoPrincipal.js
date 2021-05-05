@@ -5,7 +5,7 @@ export default function PratoPrincipal(){
         {
             img:"imagens/frango_yin_yang 1.png",
             name: "Frango Yin Yang",
-            description: <>Um pouco de batata,<br/>um pouco de salada</>,
+            description: "Um pouco de batata, um pouco de salada",
             price: "14,90",
             type: "principal"
             
@@ -13,21 +13,21 @@ export default function PratoPrincipal(){
         {
             img:"imagens/salmão.jpg",
             name: "salmão grelhado",
-            description: <>Um pouco de cuscuz,<br/>um pouco de legume</>,
+            description: "Um pouco de cuscuz, um pouco de legume",
             price: "21,90",
             type: "principal"
         },
         {
             img:"imagens/macarrão.jpg",
             name: "Macarrão",
-            description: <>Molho de tomate,<br/>queijo parmesão</>,
+            description: "Molho de tomate, queijo parmesão",
             price: "16,90",
             type: "principal"
         },
         {
             img:"imagens/ratatouille.jpg",
             name: "ratatouille",
-            description: <>Um pouco de legume,<br/>mais legumes</>,
+            description: "Um pouco de legume, mais legumes",
             price: "18,90",
             type: "principal"
         }
