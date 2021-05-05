@@ -10,11 +10,11 @@ export default function Item(props){
         if(!check){
             setCheck(true);
             CalculatePrice(item,1);    
-            verifyItem(x);
+            addVerifyItem(x);
             props.setSelectedItems(x);
         }
     }
-    function verifyItem(x){
+    function addVerifyItem(x){
         if(props.type==="principal") x.principal=true;
         if(props.type==="bebida") x.drink=true;
         if(props.type==="sobremesa") x.desert=true;
