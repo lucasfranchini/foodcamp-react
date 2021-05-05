@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
-import Topo from "./Topo";
+import Topo from "./cabecalho e rodape/Topo";
 import PratoPrincipal from "./Food/PratoPrincipal";
 import Bebida from "./Food/Bebida";
 import Sobremesa from "./Food/Sobremesa";
-import FinalizarCompra from './FinalizarCompra';
+import FinalizarCompra from './cabecalho e rodape/FinalizarCompra';
 
 function App() {
     return (
