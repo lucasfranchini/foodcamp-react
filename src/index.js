@@ -1,9 +1,10 @@
 import ReactDOM from 'react-dom';
-import Topo from "./cabecalho e rodape/Topo";
-import MakeList from "./Makelist";
-import FinalizarCompra from './cabecalho e rodape/FinalizarCompra';
+import Topo from "./components/cabecalho e rodape/Topo";
+import MakeList from "./components/Makelist";
+import FinalizarCompra from './components/cabecalho e rodape/FinalizarCompra';
 import React from 'react';
-
+import "./estilos/reset.css";
+import "./estilos/estilos.css"
 function App() {
     const pratos = [
         {
