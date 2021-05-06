@@ -2,7 +2,6 @@ import Item from "./Item"
 import React from "react";
 
 export default function MakeList(props){ 
-    console.log(props.children)
     return (
         <div className={"lista " + props.items[0].type}>
             <p className="titulo">{props.children}</p>
