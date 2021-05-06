@@ -18,13 +18,14 @@
     font-family: 'Righteous', cursive;
     font-size: 44px;
 }
-.principal{
-    margin-top: 123px;
+.lista{
     line-height: 32px;  
     font-size: 26px;
     color: #333;
     padding-left: 19px;
-    
+}
+.principal{
+    margin-top: 123px;   
 }
 .titulo{
     letter-spacing: 0.018em;
@@ -88,19 +89,11 @@
 }
 
 .bebida{
-    margin-top: 27px;
-    line-height: 32px;  
-    font-size: 26px;
-    color: #333;
-    padding-left: 19px;
+    margin-top: 27px;   
 }
 .sobremesa{
     margin-top: 27px;
     margin-bottom: 108px;
-    line-height: 32px;  
-    font-size: 26px;
-    color: #333;
-    padding-left: 19px;
 }
 .final{
     height: 92px;
