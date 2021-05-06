@@ -3,9 +3,15 @@ import Topo from "./components/cabecalho e rodape/Topo";
 import MakeList from "./components/Makelist";
 import FinalizarCompra from './components/cabecalho e rodape/FinalizarCompra';
 import React from 'react';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route
+  } from "react-router-dom";
+import Review from "./components/Review/Review";
 import "./estilos/reset.css";
-import "./estilos/estilos.css"
-function App() {
+import "./estilos/estilos.css";
+function Home() {
     const pratos = [
         {
             img:"imagens/frango_yin_yang 1.png",
@@ -121,4 +127,24 @@ function App() {
     );
 }
 
-ReactDOM.render(<App/>, document.querySelector(".root"));
+
+function App(){
+    return(
+        <Switch>
+            <Route path="/revisar">
+                <Review/>
+            </Route>
+            <Route path="/">
+                <Home/>
+            </Route>
+        </Switch>
+    );
+
+}
+
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>, 
+    document.querySelector(".root")
+    );
