@@ -107,9 +107,15 @@ function App() {
     return (
         <>
             <Topo/>
-            <MakeList type="principal" title="Primeiro, seu prato" items={pratos} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
-            <MakeList type="bebida" title="Agora, sua bebida" items={bebidas} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
-            <MakeList type="sobremesa" title="Por fim, sua sobremesa" items={sobremesas} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
+            <MakeList items={pratos} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} selectedItems={selectedItems} setSelectedItems={setSelectedItems}>
+                Primeiro, seu prato
+            </MakeList>
+            <MakeList items={bebidas} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} selectedItems={selectedItems} setSelectedItems={setSelectedItems}>
+                Agora, sua bebida
+            </MakeList>
+            <MakeList items={sobremesas} selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} selectedItems={selectedItems} setSelectedItems={setSelectedItems}>
+                Por fim, sua sobremesa
+            </MakeList>
             <FinalizarCompra selectedTypes={selectedTypes}/>
         </>
     );
