@@ -5,22 +5,23 @@ export default function Item(props){
     const [check,setCheck] = React.useState(false);
     const [counter,setCounter] = React.useState(1);
     const item = props.item;
-    const x = {...props.selectedItems};
+    const SelectedTypes = {...props.SelectedTypes};
+
     function markedItem(){
         if(!check){
             setCheck(true);
             CalculatePrice(item,1);    
-            addVerifiedItem(x);
-            props.setSelectedItems(x);
+            addVerifiedItem(SelectedTypes);
+            props.setSelectedItems(SelectedTypes);
         }
     }
-    function addVerifiedItem(x){
-        if(props.type==="principal") x.principal=true;
-        if(props.type==="bebida") x.drink=true;
-        if(props.type==="sobremesa") x.desert=true;
+    function addVerifiedItem(SelectedTypes){
+        if(props.type==="principal") SelectedTypes.principal=true;
+        if(props.type==="bebida") SelectedTypes.drink=true;
+        if(props.type==="sobremesa") SelectedTypes.desert=true;
     }
     function removeVerifiedItem(){
-        
+
     }
     return (
         <li className={check===true ? "item checked": "item"} onClick={markedItem}>
