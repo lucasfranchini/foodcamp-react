@@ -12,19 +12,27 @@ export default function Item(props){
         if(!check){
             setCheck(true);
             CalculatePrice(item,1);
-            const items = [...selectedItems,item];  
-            setSelectedItems(items);  
-            addVerifiedItem(selectedTypes);
-            
+            addVerifiedItem(selectedTypes);      
         }
     }
     function addVerifiedItem(selectedTypes){
+        let items;
         if(counter===0){
-            if(item.type==="principal") selectedTypes.principal=true;
-            if(item.type==="drink") selectedTypes.drink=true;
-            if(item.type==="sobremesa") selectedTypes.desert=true;
-            props.setSelectedTypes(selectedTypes);     
+            (item.type==="principal") && (selectedTypes.principal=true);
+            (item.type==="drink") && (selectedTypes.drink=true);
+            (item.type==="sobremesa") && (selectedTypes.desert=true);
+            props.setSelectedTypes(selectedTypes); 
+            items = [...selectedItems,{...item,qtd: 1}];  
+                
         }
+        if(counter>0){
+            items = selectedItems.map((selectedItem)=>{
+                (selectedItem.name === item.name) && selectedItem.qtd++;
+                return selectedItem;
+            })
+            
+        }
+        setSelectedItems(items); 
         setCounter(counter+1);
     }
     function removeVerifiedItem(){
