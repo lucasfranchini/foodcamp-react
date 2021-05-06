@@ -20,9 +20,9 @@ export default function Item(props){
     }
     function addVerifiedItem(selectedTypes){
         if(counter===0){
-            if(props.type==="principal") selectedTypes.principal=true;
-            if(props.type==="bebida") selectedTypes.drink=true;
-            if(props.type==="sobremesa") selectedTypes.desert=true;
+            if(item.type==="principal") selectedTypes.principal=true;
+            if(item.type==="drink") selectedTypes.drink=true;
+            if(item.type==="sobremesa") selectedTypes.desert=true;
             props.setSelectedTypes(selectedTypes);     
         }
         setCounter(counter+1);
@@ -30,9 +30,9 @@ export default function Item(props){
     function removeVerifiedItem(){
         if(counter-1===0){
             if(selectedItems.find((selectedItem)=>(selectedItem.type===item.type && selectedItem.name !== item.name))===undefined){
-                props.type==="principal" && (selectedTypes.principal=false);
-                props.type==="bebida" && (selectedTypes.drink=false);
-                props.type==="sobremesa" && (selectedTypes.desert=false);
+                item.type==="principal" && (selectedTypes.principal=false);
+                item.type==="drink" && (selectedTypes.drink=false);
+                item.type==="desert" && (selectedTypes.desert=false);
                 props.setSelectedTypes(selectedTypes);
             }
             setCheck(false);
