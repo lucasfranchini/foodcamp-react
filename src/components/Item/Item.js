@@ -1,5 +1,5 @@
 import React from "react";
-import CalculatePrice from "./CalculatePrice";
+import CalculatePrice from "../CalculatePrice";
 import addVerifiedItem from "./AddverifiedItem";
 import removeVerifiedItem from "./RemoveVerifiedItems";
 
