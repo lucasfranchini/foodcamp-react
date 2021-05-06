@@ -15,24 +15,31 @@ export default function Item(props){
             const items = [...selectedItems,item];  
             setSelectedItems(items);  
             addVerifiedItem(selectedTypes);
-            props.setSelectedTypes(selectedTypes);     
+            
         }
     }
     function addVerifiedItem(selectedTypes){
-        if(props.type==="principal") selectedTypes.principal=true;
-        if(props.type==="bebida") selectedTypes.drink=true;
-        if(props.type==="sobremesa") selectedTypes.desert=true;
+        if(counter===0){
+            if(props.type==="principal") selectedTypes.principal=true;
+            if(props.type==="bebida") selectedTypes.drink=true;
+            if(props.type==="sobremesa") selectedTypes.desert=true;
+            props.setSelectedTypes(selectedTypes);     
+        }
+        setCounter(counter+1);
     }
     function removeVerifiedItem(){
-        setCheck(false);
-        if(selectedItems.find((selectedItem)=>(selectedItem.type===item.type && selectedItem.name !== item.name))===undefined){
-            if(props.type==="principal") selectedTypes.principal=false;
-            if(props.type==="bebida") selectedTypes.drink=false;
-            if(props.type==="sobremesa") selectedTypes.desert=false;
-            props.setSelectedTypes(selectedTypes);
-            
+        if(counter-1===0){
+            if(selectedItems.find((selectedItem)=>(selectedItem.type===item.type && selectedItem.name !== item.name))===undefined){
+                props.type==="principal" && (selectedTypes.principal=false);
+                props.type==="bebida" && (selectedTypes.drink=false);
+                props.type==="sobremesa" && (selectedTypes.desert=false);
+                props.setSelectedTypes(selectedTypes);
+            }
+            setCheck(false);
+            setSelectedItems(selectedItems.filter((selectedItem)=>(selectedItem.name !== item.name)))
         }
-        setSelectedItems(selectedItems.filter((selectedItem)=>(selectedItem.name !== item.name)))
+        setCounter(counter-1);
+        
     }
     
     return (
@@ -42,9 +49,9 @@ export default function Item(props){
             <p className="extras">{item.description}</p>
             <p> R$ {item.price}</p>
             <div className= {check===true ? "quantidade mostrar": "quantidade"}>
-                <ion-icon name="remove-outline" style={{color: "#CF2B2B"}} onClick={()=>{(counter-1===0)?removeVerifiedItem():setCounter(counter-1)}}></ion-icon>
+                <ion-icon name="remove-outline" style={{color: "#CF2B2B"}} onClick={removeVerifiedItem}></ion-icon>
                 <span>{counter}</span>
-                <ion-icon name="add-outline" style={{color: "#32B72F"}} onClick={()=>setCounter(counter+1)}></ion-icon>
+                <ion-icon name="add-outline" style={{color: "#32B72F"}} onClick={addVerifiedItem}></ion-icon>
             </div>
         </li>
     );
