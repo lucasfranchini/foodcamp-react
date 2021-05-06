@@ -8,7 +8,6 @@ export default function Item(props){
     const selectedTypes = {...props.selectedTypes};
     const {selectedItems,setSelectedItems} = props;
     
-    
     function markedItem(){
         if(!check){
             setCheck(true);
@@ -16,9 +15,7 @@ export default function Item(props){
             const items = [...selectedItems,item];  
             setSelectedItems(items);  
             addVerifiedItem(selectedTypes);
-            props.setSelectedTypes(selectedTypes);
-            
-            
+            props.setSelectedTypes(selectedTypes);     
         }
     }
     function addVerifiedItem(selectedTypes){
@@ -27,7 +24,7 @@ export default function Item(props){
         if(props.type==="sobremesa") selectedTypes.desert=true;
     }
     function removeVerifiedItem(){
-        
+        setCheck(false);
         if(selectedItems.find((selectedItem)=>(selectedItem.type===item.type && selectedItem.name !== item.name))===undefined){
             if(props.type==="principal") selectedTypes.principal=false;
             if(props.type==="bebida") selectedTypes.drink=false;
@@ -36,7 +33,6 @@ export default function Item(props){
             
         }
         setSelectedItems(selectedItems.filter((selectedItem)=>(selectedItem.name !== item.name)))
-
     }
     
     return (
@@ -46,12 +42,7 @@ export default function Item(props){
             <p className="extras">{item.description}</p>
             <p> R$ {item.price}</p>
             <div className= {check===true ? "quantidade mostrar": "quantidade"}>
-                <ion-icon name="remove-outline" style={{color: "#CF2B2B"}} onClick={()=>{
-                    if(counter-1===0) {
-                        removeVerifiedItem();
-                        setCheck(false);
-                    } else setCounter(counter-1);
-                }}></ion-icon>
+                <ion-icon name="remove-outline" style={{color: "#CF2B2B"}} onClick={()=>{(counter-1===0)?removeVerifiedItem():setCounter(counter-1)}}></ion-icon>
                 <span>{counter}</span>
                 <ion-icon name="add-outline" style={{color: "#32B72F"}} onClick={()=>setCounter(counter+1)}></ion-icon>   
             </div>
