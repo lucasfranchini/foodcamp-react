@@ -20,7 +20,7 @@ export default function Item(props){
         if(counter===0){
             (item.type==="principal") && (selectedTypes.principal=true);
             (item.type==="drink") && (selectedTypes.drink=true);
-            (item.type==="sobremesa") && (selectedTypes.desert=true);
+            (item.type==="desert") && (selectedTypes.desert=true);
             props.setSelectedTypes(selectedTypes); 
             items = [...selectedItems,{...item,qtd: 1}];  
                 
@@ -29,8 +29,7 @@ export default function Item(props){
             items = selectedItems.map((selectedItem)=>{
                 (selectedItem.name === item.name) && selectedItem.qtd++;
                 return selectedItem;
-            })
-            
+            });    
         }
         setSelectedItems(items); 
         setCounter(counter+1);
