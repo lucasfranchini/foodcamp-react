@@ -5,20 +5,20 @@ export default function Item(props){
     const [check,setCheck] = React.useState(false);
     const [counter,setCounter] = React.useState(1);
     const item = props.item;
-    const SelectedTypes = {...props.SelectedTypes};
+    const selectedTypes = {...props.selectedTypes};
 
     function markedItem(){
         if(!check){
             setCheck(true);
             CalculatePrice(item,1);    
-            addVerifiedItem(SelectedTypes);
-            props.setSelectedItems(SelectedTypes);
+            addVerifiedItem(selectedTypes);
+            props.setSelectedTypes(selectedTypes);
         }
     }
-    function addVerifiedItem(SelectedTypes){
-        if(props.type==="principal") SelectedTypes.principal=true;
-        if(props.type==="bebida") SelectedTypes.drink=true;
-        if(props.type==="sobremesa") SelectedTypes.desert=true;
+    function addVerifiedItem(selectedTypes){
+        if(props.type==="principal") selectedTypes.principal=true;
+        if(props.type==="bebida") selectedTypes.drink=true;
+        if(props.type==="sobremesa") selectedTypes.desert=true;
     }
     function removeVerifiedItem(){
 
