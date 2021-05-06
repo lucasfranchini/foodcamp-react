@@ -10,14 +10,17 @@ export default function Item(props){
         if(!check){
             setCheck(true);
             CalculatePrice(item,1);    
-            addVerifyItem(x);
+            addVerifiedItem(x);
             props.setSelectedItems(x);
         }
     }
-    function addVerifyItem(x){
+    function addVerifiedItem(x){
         if(props.type==="principal") x.principal=true;
         if(props.type==="bebida") x.drink=true;
         if(props.type==="sobremesa") x.desert=true;
+    }
+    function removeVerifiedItem(){
+        
     }
     return (
         <li className={check===true ? "item checked": "item"} onClick={markedItem}>

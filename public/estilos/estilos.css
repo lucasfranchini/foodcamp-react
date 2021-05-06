@@ -176,9 +176,10 @@
     color: #50D074;
     margin-top: 11px;
 }
-.cancela{
+.final .fechar-pedido{
     background-color: #50D074;
     color: #fff;
+    font-weight: 700;
 }
 .mostrar{
     display: flex;
