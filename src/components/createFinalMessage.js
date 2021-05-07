@@ -29,6 +29,7 @@ olá, gostaria de fazer o pedido:
             desert++;
         }
     } );
-    console.log(message);
+    message +=`
+Total: R$ ${total.price.toFixed(2)}`;
     return message;
 }

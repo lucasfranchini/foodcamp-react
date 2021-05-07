@@ -102,7 +102,6 @@ export default function Home(props) {
         desert: false
     });
     const {selectedItems,setSelectedItems} = props;
-    console.log(selectedItems);
     
     return (
         <>
