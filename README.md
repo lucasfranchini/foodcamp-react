@@ -4,10 +4,10 @@ Este é o segundo projeto do Bootcamp em que aplicamos REAC, a ideia é refazer 
 
 ## Pontos Importantes abordados
 Com o conteúdo da semana as principais ferramentes aprendidas foram:
-    - Separar as funçoes em pastas
-    - aplicar o layout atraves do React
-    - o funcionamento de arrays e objetos no JS
-    - como utilizar estados no React
-    - o identificador unico de cada item passados num map
-    - a rendereização de apenas o componente no qual a modificiação ocorreu.
+- Separar as funçoes em pastas
+- aplicar o layout atraves do React
+- o funcionamento de arrays e objetos no JS
+- como utilizar estados no React
+- o identificador unico de cada item passados num map
+- a rendereização de apenas o componente no qual a modificiação ocorreu.
 
