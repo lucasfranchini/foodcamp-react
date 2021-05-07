@@ -8,7 +8,7 @@ export default function Review(props){
         <div className="review">
         <Topo/>
         <h1>Revise seu pedido</h1>
-        <Orders/>
+        <Orders selectedItems={selectedItems}/>
         <button className="confirm">Tudo certo, pode pedir!</button>
         <button className="cancel" onClick={()=>setSelectedItems([])}><Link to="/">Cancelar</Link></button>
         </div>
