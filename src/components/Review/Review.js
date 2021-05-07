@@ -1,9 +1,9 @@
 import Topo from "../cabecalho e rodape/Topo";
-import Orders from "../Orders";
+import Orders from "../Orders/Orders";
 import "./Review.css";
 import {Link} from "react-router-dom";
 export default function Review(props){
-    const {setSelectedItems} = props;
+    const {setSelectedItems,selectedItems} = props;
     return(
         <div className="review">
         <Topo/>
