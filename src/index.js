@@ -1,5 +1,4 @@
 import "./reset.css";
-import "./estilos/estilos.css";
 import ReactDOM from 'react-dom';
 import React from 'react';
 import {
@@ -9,9 +8,6 @@ import {
   } from "react-router-dom";
 import Review from "./components/Review/Review";
 import Home from "./components/Home";
-
-
-
 
 function App(){
     const [selectedItems,setSelectedItems] = React.useState([]);
@@ -25,7 +21,6 @@ function App(){
             </Route>
         </Switch>
     );
-
 }
 
 ReactDOM.render(

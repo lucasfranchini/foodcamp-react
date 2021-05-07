@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import "./Footer.css";
+
 export default function Footer(props){
     const {principal,drink,desert} = props.selectedTypes; 
     let texto;
