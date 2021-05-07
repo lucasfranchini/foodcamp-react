@@ -17,7 +17,7 @@ export default function Review(props){
         <Topo/>
         <h1>Revise seu pedido</h1>
         <Orders selectedItems={selectedItems} total={total}/>
-        <a href={"https://wa.me/5532988417685?text="+finalMessage} target="_blank"><button className="confirm">Tudo certo, pode pedir!</button></a>
+        <a href={"https://wa.me/5532988417685?text="+finalMessage} target="_blank" rel="noreferrer"><button className="confirm">Tudo certo, pode pedir!</button></a>
         <button className="cancel" onClick={()=>setSelectedItems([])}><Link to="/">Cancelar</Link></button>
         </div>
     );
