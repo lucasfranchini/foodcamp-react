@@ -3,7 +3,6 @@
     line-height: 32px;  
     font-size: 26px;
     color: #333;
-    padding-left: 19px;
     letter-spacing: 0.018em;
     font-family: 'Righteous', cursive;
     display: flex;
@@ -11,7 +10,7 @@
     align-items: center;
 }
 .review h1{
-    width: 100%;
+    width: 377px;
 }
 .review button{
     width: 329px;
