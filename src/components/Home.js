@@ -3,7 +3,7 @@ import MakeList from "./Makelist";
 import FinalizarCompra from './cabecalho e rodape/FinalizarCompra';
 import React from "react";
 
-export default function Home() {
+export default function Home(props) {
     const pratos = [
         {
             img:"imagens/frango_yin_yang 1.png",
@@ -95,13 +95,15 @@ export default function Home() {
             type: "desert"
         }
     ];
-    const [selectedItems,setSelectedItems] = React.useState([]);
-    console.log(selectedItems);
+    
     const [selectedTypes,setSelectedTypes] = React.useState({
         principal: false,
         drink: false,
         desert: false
     });
+    const {selectedItems,setSelectedItems} = props;
+    console.log(selectedItems);
+    
     return (
         <>
             <Topo/>

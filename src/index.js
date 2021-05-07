@@ -12,13 +12,14 @@ import "./estilos/estilos.css";
 
 
 function App(){
+    const [selectedItems,setSelectedItems] = React.useState([]);
     return(
         <Switch>
             <Route path="/revisar">
-                <Review/>
+                <Review selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
             </Route>
             <Route path="/">
-                <Home/>
+                <Home selectedItems={selectedItems} setSelectedItems={setSelectedItems}/>
             </Route>
         </Switch>
     );
