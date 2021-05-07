@@ -14,7 +14,6 @@ export default function Item(props){
     function markedItem(){
         if(!check){
             setCheck(true);
-            CalculatePrice(item,1);
             addVerifiedItem(selectedTypes,item,selectedItems,setSelectedItems,counter,setCounter,props.setSelectedTypes);      
         }
     }
