@@ -1,0 +1,28 @@
+.final{
+    height: 92px;
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final button{
+    width: calc(100% - 50px);
+    height: 61px;
+    border-radius: 50px;
+    border: hidden;
+    background-color: #cbcbcb;
+    color: #fff;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+}
+.final .fechar-pedido{
+    background-color: #50D074;
+    color: #fff;
+    font-weight: 700;
+}

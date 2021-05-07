@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
-export default function FinalizarCompra(props){
+import "./Footer.css";
+export default function Footer(props){
     const {principal,drink,desert} = props.selectedTypes; 
     let texto;
     const confirmation = (principal===true && drink===true && desert===true);

@@ -1,3 +1,5 @@
+import "./reset.css";
+import "./estilos/estilos.css";
 import ReactDOM from 'react-dom';
 import React from 'react';
 import {
@@ -7,8 +9,8 @@ import {
   } from "react-router-dom";
 import Review from "./components/Review/Review";
 import Home from "./components/Home";
-import "./estilos/reset.css";
-import "./estilos/estilos.css";
+
+
 
 
 function App(){

@@ -1,10 +1,10 @@
 import "./Review.css";
-import Topo from "../cabecalho e rodape/Topo";
+import Topo from "../Header/Header";
 import Orders from "../Orders/Orders";
-import CalculatePrice from "../CalculatePrice";
+import CalculatePrice from "./CalculatePrice";
 import {Link} from "react-router-dom";
-import organizeItems from "../OrganizeItems";
-import createFinalMessage from "../createFinalMessage";
+import organizeItems from "./OrganizeItems";
+import createFinalMessage from "./createFinalMessage";
 
 export default function Review(props){
     const {setSelectedItems,selectedItems} = props;

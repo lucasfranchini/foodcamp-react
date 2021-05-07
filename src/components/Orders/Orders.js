@@ -1,5 +1,5 @@
 import "./Orders.css";
-import PrintItem from "../PrintItem";
+import PrintItem from "./PrintItem";
 
 export default function Orders(props){  
     const total = {...props.total}

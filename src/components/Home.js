@@ -1,6 +1,6 @@
-import Topo from "./cabecalho e rodape/Topo";
-import MakeList from "./Makelist";
-import FinalizarCompra from './cabecalho e rodape/FinalizarCompra';
+import Topo from "./Header/Header";
+import MakeList from "./MakeList/Makelist";
+import FinalizarCompra from './Footer/Footer';
 import React from "react";
 
 export default function Home(props) {

@@ -1,3 +1,4 @@
+import "./item.css";
 import React from "react";
 import addVerifiedItem from "./AddverifiedItem";
 import removeVerifiedItem from "./RemoveVerifiedItems";

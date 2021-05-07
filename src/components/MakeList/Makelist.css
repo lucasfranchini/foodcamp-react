@@ -1,0 +1,31 @@
+.lista{
+    line-height: 32px;  
+    font-size: 26px;
+    color: #333;
+    padding-left: 19px;
+}
+.titulo{
+    letter-spacing: 0.018em;
+    font-family: 'Righteous', cursive;
+}
+.itens{
+    margin-top: 17px;
+    width: 100%;
+    display: flex;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.itens::-webkit-scrollbar {
+    display: none;
+}
+.principal{
+    margin-top: 123px;   
+}
+.drink{
+    margin-top: 27px;   
+}
+.desert{
+    margin-top: 27px;
+    margin-bottom: 108px;
+}

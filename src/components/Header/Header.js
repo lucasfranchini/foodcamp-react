@@ -1,4 +1,5 @@
-export default function Topo(){
+import "./Header.css"
+export default function Header(){
     return (
         <div className="topo">
             <p>FoodCamp</p>

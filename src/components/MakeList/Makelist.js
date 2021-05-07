@@ -1,4 +1,5 @@
-import Item from "./Item/Item"
+import "./Makelist.css";
+import Item from "../Item/Item";
 import React from "react";
 
 export default function MakeList(props){ 
